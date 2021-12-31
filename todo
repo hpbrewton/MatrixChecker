@@ -1,0 +1,19 @@
+Todo:
+First thing is to solve for the number of dimensions for each variable
+Convert all variables into SMT expressions
+Convert all operations into SMT expressions
+Execute SMT expressions
+Find min unsatisfiable core
+Map these variables back into the simple language operations
+Map simple language operations back to Python variables
+Feed back into positions in the program 
+List of operations that need to be covered...
+Come up with a way to recover from unknown functions
+Support kwargs
+Type check dimensions passed to array
+
+Done:
+Get all variables
+Create definition of language for Numpy to output
+Follow the tutorial on Numpy dispatch
+Figure out how to get line of execution

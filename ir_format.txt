@@ -1,0 +1,25 @@
+Format:
+LL CC OP arg1 arg2 ... argN
+...
+
+Within a line, the seperator is a space.
+Between lines, the seperator is a unix newline '\n'.
+The final newline is optional.
+
+LL -- line number (integer or "?" if unknown)
+CC -- column number (integer or "?" if unknown)
+OP -- an operation
+	are in lower_snake_case 
+	no arg op (rand, from file...), postfix op, bin op:
+		1 - output varb (must be a variable)
+		2 - left input varb
+		3 - right input varb
+	supported ops:
+		unknown: unknown operation -- should error
+		add - binop: array addition
+		multiply - binop: array multiplication
+		array_variable - 0 args: variable dimensions
+		array_fixed - 1+ args: create an array of those dimensions
+arg1 -- an argument to an operation
+	r'-?\d+' - literal integer
+	r'\$[A-Za-z0-9_]+'  - a variable
